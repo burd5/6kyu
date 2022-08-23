@@ -35,3 +35,21 @@ function wave(str){
     //return the final array
     return finalArr;
   }
+
+  //other solution
+
+  function wave(str){
+    let newArr = [];
+    for (let i = 0; i < str.length; i++) {
+      let copy = str.split('');
+      if(copy[i] !== ' ') {
+      copy[i] = copy[i].toUpperCase()
+      newArr.push(copy.join(''))
+      }
+    }
+    return newArr
+  }
+
+  //other solution
+
+  var wave=w=>[...w].map((a,i)=>w.slice(0,i)+a.toUpperCase()+w.slice(i+1)).filter(a=>a!=w)
