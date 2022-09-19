@@ -7,6 +7,8 @@ Sort the given array of strings in alphabetical order, case insensitive. For exa
 
 // input: names - unsorted strings
 // output: case-agnostic sort
+
+
 sortme = function( names ){
     return names.sort( (a,b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 }
