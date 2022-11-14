@@ -19,3 +19,13 @@ function partsSums(ls) {
     let sum = ls.reduce((p, c) => p + c, 0);
     return ls.map(v => sum = sum - v);
 }
+
+// other solution
+
+function partsSums(ls) {
+    let r = [0];
+    for(let i in ls.reverse()){
+     r.push(ls[i]+r[i]);
+    }
+    return r.reverse();
+}
